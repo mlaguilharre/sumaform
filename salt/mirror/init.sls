@@ -229,8 +229,8 @@ nfs_server:
 # HACK: direct serving of grafana archive
 grafana_archive:
   file.managed:
-    - name: /srv/mirror/grafana-4.2.0.linux-x64.tar.gz
-    - source: https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.2.0.linux-x64.tar.gz
-    - source_hash: sha512=8c100f5d61b8ebac2abb3894d3f37e926c6fd81eb3ab68fd966d2bc38d9ec2386fee15dd745f5efe7c0e52de06321f3e983fdab0185b3da3f28562b54c60994f
+    - name: /srv/mirror/grafana-4.6.3.linux-x64.tar.gz
+    - source: https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.6.3.linux-x64.tar.gz
+    - source_hash: sha512=dad2c26b998910519cc462aa3dc91bd6d7ab6b7fdea9e1aa3c54ed5eb86830e9b8484434a5fd307f7ff490549509df97486249b301ccd84a7bd5b2de11ffe929
     - require:
       - file: mirror_directory

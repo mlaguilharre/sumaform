@@ -59,9 +59,9 @@ grafana:
   archive.extracted:
     - name: /opt/grafana
     {% if grains.get('mirror') %}
-    - source: http://{{grains.get("mirror")}}/grafana-4.2.0.linux-x64.tar.gz
+    - source: http://{{grains.get("mirror")}}/grafana-4.6.3.linux-x64.tar.gz
     {% else %}
-    - source: https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.2.0.linux-x64.tar.gz
+    - source: https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.6.3.linux-x64.tar.gz
     {% endif %}
     - source_hash: sha256=e9927baaaf6cbcab64892dedd11ccf509e4edea54670db4250b9e7568466ec61
     - archive_format: tar
