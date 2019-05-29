@@ -1,0 +1,14 @@
+[tools]
+name=cbosdonnat
+type=rpm-md
+
+{% if grains.get('osmajorrelease', None)|int() == 15 %}
+{% set path = 'openSUSE_Leap_15.0' %}
+{% else %}
+{% set path = 'openSUSE_Leap_42.3' %}
+{% endif %}
+
+baseurl=http://download.opensuse.org/repositories/home:/cbosdonnat/{{path}}/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/home:/cbosdonnat/{{path}}/repodata/repomd.xml.key
+enabled=1
